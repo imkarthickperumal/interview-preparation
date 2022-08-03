@@ -10,10 +10,16 @@ map()     : It does not change the orginal array
 forEach() : It is not executed for empty elements
 
 
-// Qestion 2 : null vs undefined
+// Question 2 : null vs undefined
 
 null      : The value of represents the any object value 
 undefined : The undefined property indicates that a variable has not been declared 
+
+
+// Question 3 : Event Deligation 
+Event Deligation : Event Deligation is basically pattern to handle event efficiently. we can add
+                   an event listener to a parent element and call an event on particular target.
+
 
 
 
