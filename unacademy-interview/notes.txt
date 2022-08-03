@@ -1,0 +1,13 @@
+Question 1 : map vs forEach
+
+map()     : map() method create new array
+forEach() : forEach() method dosen't create new array basesd on the given array
+
+map()     : map() method returns the newly created array according to the provieded callback function
+forEach() : forEach() method returns "undefined"
+
+map()     : It does not change the orginal array
+forEach() : It is not executed for empty elements
+
+
+
