@@ -43,4 +43,19 @@ let arra = [
   [10,11,12],
 ];
 let flattend= [].concat(...arra);
-console.log(flattend);
+console.log(flattend); // error 
+
+// ROUND 2
+
+// Question 1 : var vs let vs const
+
+{
+  var num = 10;
+}
+console.log(num);
+
+{
+  let num1 = 10;
+  console.log(num1);
+}
+// console.log(num1);// error num1 is not defined bcoz block level scope

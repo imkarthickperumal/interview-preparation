@@ -1,3 +1,5 @@
+ROUND 1 
+
 Question 1 : map vs forEach
 
 map()     : map() method create new array
@@ -23,6 +25,23 @@ Event Deligation : Event Deligation is basically pattern to handle event efficie
 // Question 4 : What is flatten array
 
 flatten array : 
+
+
+ROUND 2
+
+// Question 1 : var vs let vs const
+
+var : var variable is a functional scope
+let &  const : let & const  variable is a block level scope
+
+var : can be updated re-declared in the scope
+let & const : cannot be re-declared in the scope
+
+var : it can be declared without initilization
+let & const : it can be declared without initilization
+
+
+
 
 
 
