@@ -41,6 +41,13 @@ var : it can be declared without initilization
 let & const : it can be declared without initilization
 
 
+// Question 2 : setTimeout Output
+
+setTimeout Output : setTimeout only complete code aftr runns successfully
+
+                    
+
+
 
 
 

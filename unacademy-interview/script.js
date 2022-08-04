@@ -36,14 +36,9 @@ document.querySelector("#products").addEventListener("click", (event) => {
 
 // Question 4 : Flatten the Array
 
-let arra = [
-  [1,2],
-  [3,4],
-  [5,6,7,8,9]
-  [10,11,12],
-];
-let flattend= [].concat(...arra);
-console.log(flattend); // error 
+let arra = [[1, 2], [3, 4], [5, 6, 7, 8, 9][(10, 11, 12)]];
+let flattend = [].concat(...arra);
+console.log(flattend); // error
 
 // ROUND 2
 
@@ -59,3 +54,27 @@ console.log(num);
   console.log(num1);
 }
 // console.log(num1);// error num1 is not defined bcoz block level scope
+
+var num3 = 10;
+num3 = 20; // variable value re-assign
+
+let num4 = 20;
+num4 = 30;
+
+const num5 = 30;
+num5 = 40; // value not reassign
+
+// Question 2 : setTimeout Output
+
+function a() {
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function log() {
+      console.log(i); // what is logged?
+    }, i * 1000);
+  }
+}
+//3
+//3
+//3
+// encase use let i = 0 it's block scope so result 0,1,2 
+a();
