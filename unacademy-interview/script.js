@@ -55,18 +55,18 @@ console.log(num);
 }
 // console.log(num1);// error num1 is not defined bcoz block level scope
 
-var num3 = 10;
-num3 = 20; // variable value re-assign
+// var num3 = 10;
+// num3 = 20; // variable value re-assign
 
-let num4 = 20;
-num4 = 30;
+// let num4 = 20;
+// num4 = 30;
 
-const num5 = 30;
-num5 = 40; // value not reassign
+// const num5 = 30;
+// num5 = 40; // value not reassign
 
 // Question 2 : setTimeout Output
 
-function a() {
+function aa() {
   for (var i = 0; i < 3; i++) {
     setTimeout(function log() {
       console.log(i); // what is logged?
@@ -77,4 +77,43 @@ function a() {
 //3
 //3
 // encase use let i = 0 it's block scope so result 0,1,2 
-a();
+aa();
+
+// Question 3 : Explain Call, Apply and Bind
+// 1. call
+// var person1 = {firstName : "jack", lastName : "rose" }
+// var person2 = {firstName : "harry", lastName : "potter" }
+
+// function say(greeting){
+//   console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+// }
+
+// say.call(person1, "Hello");// Hello jack rose
+// say.call(person2, "Hello"); // Hello harry potter
+
+// 2. Apply
+
+// var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
+// var person2 = {firstName: 'Kelly', lastName: 'King'};
+
+// function say(greeting) {
+//     console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+// }
+
+// say.apply(person1, ['Hello']); // Hello Jon Kuperman
+// say.apply(person2, ['Hello']); // Hello Kelly King
+
+// 3. Bind
+
+var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
+var person2 = {firstName: 'Kelly', lastName: 'King'};
+
+function say(){
+  console.log(`Hello ` + this.firstName + ' ' +this.lastName);
+}
+
+var sayHelloJon = say.bind(person1);
+var sayHelloKelly = say.bind(person2);
+
+sayHelloJon(); // Hello Jon Kuperman
+sayHelloKelly(); // Hello Kelly King

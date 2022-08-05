@@ -45,6 +45,12 @@ let & const : it can be declared without initilization
 
 setTimeout Output : setTimeout only complete code aftr runns successfully
 
+// Question 3 : Explain Call, Apply and Bind
+ Call : call invokes the function and allows you to pass in arguments one by one.
+ Apply : Apply invokes the function and allows you to pass in a "array" any nummber of arguments
+ Bind : Bind returns new function, allowing you to pass in a this array and any number of arguments 
+
+
                     
 
 
