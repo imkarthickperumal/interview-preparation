@@ -76,7 +76,7 @@ function aa() {
 //3
 //3
 //3
-// encase use let i = 0 it's block scope so result 0,1,2 
+// encase use let i = 0 it's block scope so result 0,1,2
 aa();
 
 // Question 3 : Explain Call, Apply and Bind
@@ -105,11 +105,11 @@ aa();
 
 // 3. Bind
 
-var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
-var person2 = {firstName: 'Kelly', lastName: 'King'};
+var person1 = { firstName: "Jon", lastName: "Kuperman" };
+var person2 = { firstName: "Kelly", lastName: "King" };
 
-function say(){
-  console.log(`Hello ` + this.firstName + ' ' +this.lastName);
+function say() {
+  console.log(`Hello ` + this.firstName + " " + this.lastName);
 }
 
 var sayHelloJon = say.bind(person1);
@@ -117,3 +117,25 @@ var sayHelloKelly = say.bind(person2);
 
 sayHelloJon(); // Hello Jon Kuperman
 sayHelloKelly(); // Hello Kelly King
+
+// Question 4 : Composition Pollyfill
+function addFive(a) {
+  return a + 5;
+}
+function substractTwo(a) {
+  return a - 2;
+}
+function multiplyFour(a) {
+  return a * 4;
+}
+
+const compose = (...functions) => {
+  return (args) => {
+    return functions.reduceRight((arg, fn) => fn(arg), args); // reduceRight=>evaluate value right to left
+  };
+};
+
+const eveluate = compose(addFive, substractTwo, multiplyFour);
+console.log(eveluate(5)); // result 23 . evulate (right to left)
+// a => oda value 5 & ethoda explanaition reverse order
+// multiplyFour oda return 5*4=20 result 20 oda next reverse function la iruka value -2 so 20-2=18 and again reverse order 18+5=23

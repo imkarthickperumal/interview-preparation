@@ -50,6 +50,10 @@ setTimeout Output : setTimeout only complete code aftr runns successfully
  Apply : Apply invokes the function and allows you to pass in a "array" any nummber of arguments
  Bind : Bind returns new function, allowing you to pass in a this array and any number of arguments 
 
+// Question 4 : Composition Pollyfill
+
+Composition Pollyfill : Polyfill is a way to modify or add new functions. It is basically a piece of code to add/modify the new functions. It is used to provide modern functionality to web browsers.
+
 
                     
 
